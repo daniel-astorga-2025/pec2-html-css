@@ -5,19 +5,120 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
-    <!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>Contacto | Artesanos del Ebro</title>
   </head>
+
   <body>
     <include src="views/header.html"></include>
 
-    <main>
-      <!-- contenido -->
-            Pagina extras
+    <main class="contact-page">
+      <section class="contact-hero">
+        <p class="contact-hero__eyebrow">Participa en las jornadas</p>
+        <h1>Contacto e inscripciones</h1>
+        <p>
+          Escríbenos si quieres asistir, colaborar como tallerista o recibir más información
+          sobre las jornadas Artesanos del Ebro.
+        </p>
+      </section>
+
+      <section class="contact-layout">
+        <div class="contact-card card">
+          <div class="card-body">
+            <h2 class="card-title">Información práctica</h2>
+
+            <ul class="contact-list">
+              <li>
+                <strong>Fechas:</strong>
+                15–18 de junio
+              </li>
+              <li>
+                <strong>Ubicación:</strong>
+                Centro cultural del Ebro
+              </li>
+              <li>
+                <strong>Horario:</strong>
+                10:00–19:00
+              </li>
+            </ul>
+
+            <p class="contact-card__note">
+              Las plazas para talleres son limitadas. Te responderemos lo antes posible
+              para confirmar disponibilidad.
+            </p>
+          </div>
+        </div>
+
+        <form
+          class="contact-form"
+          name="contacto-artesanos"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contacto-artesanos" />
+
+          <p class="contact-form__hidden">
+            <label>
+              No rellenar:
+              <input name="bot-field" />
+            </label>
+          </p>
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input
+              id="name"
+              class="form-control"
+              type="text"
+              name="name"
+              required
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input
+              id="email"
+              class="form-control"
+              type="email"
+              name="email"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="interest" class="form-label">Motivo de contacto</label>
+            <select id="interest" class="form-select" name="interest" required>
+              <option value="">Selecciona una opción</option>
+              <option value="asistencia">Quiero asistir</option>
+              <option value="taller">Quiero participar en un taller</option>
+              <option value="colaboracion">Quiero colaborar</option>
+              <option value="informacion">Solicitar información</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea
+              id="message"
+              class="form-control"
+              name="message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            Enviar mensaje
+          </button>
+        </form>
+      </section>
     </main>
- 
+
     <include src="views/footer.html"></include>
+
     <script type="module" src="./assets/scripts/main.js"></script>
-    <!-- do not remove this line! -->
   </body>
 </html>

@@ -1,0 +1,111 @@
+/* =========================
+   CONTACT / FREE PAGE
+========================= */
+
+.contact-page {
+  flex: 1;
+  padding: clamp(1rem, 4vw, 3rem);
+  background:
+    radial-gradient(circle at top left, oklch(88% 0.08 75), transparent 34rem),
+    linear-gradient(135deg, oklch(96% 0.03 85), oklch(90% 0.04 210));
+
+  container-type: inline-size;
+}
+
+.contact-hero {
+  max-width: 780px;
+  margin: 0 auto 2rem;
+  text-align: center;
+
+  &__eyebrow {
+    margin-bottom: 0.5rem;
+    color: oklch(42% 0.12 55);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 7cqw, 4rem);
+    line-height: 1;
+  }
+
+  p {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: clamp(1rem, 2cqw, 1.2rem);
+  }
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  border: 0;
+  border-radius: 1.25rem;
+  box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 10%);
+
+  &__note {
+    margin-bottom: 0;
+    color: oklch(42% 0.04 70);
+  }
+}
+
+.contact-list {
+  display: grid;
+  gap: 0.75rem;
+
+  padding-left: 1.1rem;
+  margin: 1rem 0;
+}
+
+.contact-form {
+  padding: clamp(1rem, 3vw, 2rem);
+  border-radius: 1.25rem;
+  background: rgb(255 255 255 / 86%);
+  box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 10%);
+  backdrop-filter: blur(12px);
+
+  .form-control,
+  .form-select {
+    border-radius: 0.85rem;
+  }
+
+  .btn {
+    min-width: 10rem;
+    border-radius: 999px;
+  }
+
+  &__hidden {
+    display: none;
+  }
+}
+
+/* =========================
+   CONTAINER QUERIES
+========================= */
+
+@container (min-width: 760px) {
+  .contact-layout {
+    grid-template-columns: minmax(16rem, 0.8fr) minmax(20rem, 1.2fr);
+    align-items: start;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .contact-page {
+    min-height: 100dvh;
+  }
+}
