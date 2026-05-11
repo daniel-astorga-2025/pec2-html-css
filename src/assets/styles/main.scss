@@ -13,7 +13,14 @@
  * It's a best practice to use a different partial for each page
  */
 
+/**
+ * Base (reset + layout global)
+ */
+@use "base/reset";
+
+@use "layouts/header";
 @use "layouts/home";
+@use "layouts/footer";
 
 /**
  * Do NOT include anything else in this file!

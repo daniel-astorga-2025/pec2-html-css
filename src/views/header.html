@@ -1,19 +1,42 @@
 <header class="site-header">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Artesanía</a>
 
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="logo-circle">
+          <img src="assets/images/logo.jpg" alt="Logotipo Artesanos del Ebro">
+        </span>
+        <span class="fw-bold">Artesanos del Ebro</span>
+      </a>
+
+      <!-- Botón móvil -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
         ☰
       </button>
 
-      <div class="collapse navbar-collapse" id="nav">
+      <!-- Menú -->
+      <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto">
-          <li><a href="speakers.html">Ponentes</a></li>
-          <li><a href="article.html">Artículo</a></li>
-          <li><a href="extras.html">Extras</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="speakers.html">Ponentes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="article.html">Artículo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="extras.html">Extras</a>
+          </li>
         </ul>
       </div>
+
     </div>
   </nav>
 </header>

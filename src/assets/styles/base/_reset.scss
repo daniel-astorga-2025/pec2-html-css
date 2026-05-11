@@ -1,0 +1,12 @@
+html,
+body {
+  width: 100%;
+  min-height: 100dvh;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
