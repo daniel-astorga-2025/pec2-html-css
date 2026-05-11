@@ -1,0 +1,116 @@
+/* =========================
+   SPEAKERS PAGE
+========================= */
+
+.speakers-page {
+  flex: 1;
+  padding: 2rem;
+  background: #f6f1e8;
+
+  container-type: inline-size;
+}
+
+.speakers-hero {
+  max-width: 760px;
+  margin: 0 auto 2rem;
+  text-align: center;
+
+  &__eyebrow {
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 620px;
+  }
+}
+
+/* Retícula con Flexbox.
+   No se usan .row ni .col-* de Bootstrap. */
+.speakers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.speaker-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 240px;
+
+  min-width: 0;
+  overflow: hidden;
+
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+
+    padding: 1rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+
+  p {
+    flex: 1;
+    margin: 0;
+  }
+}
+
+/* =========================
+   CONTAINER QUERIES
+========================= */
+
+@container (min-width: 720px) {
+  .speaker-card {
+    flex-basis: calc(50% - 1.5rem);
+  }
+}
+
+@container (min-width: 1024px) {
+  .speaker-card {
+    flex-basis: calc(25% - 1.5rem);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .speakers-page {
+    padding: 1.25rem;
+  }
+
+  .speakers-grid {
+    gap: 1rem;
+  }
+}

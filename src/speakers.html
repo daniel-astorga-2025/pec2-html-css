@@ -5,19 +5,67 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
-    <!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>Ponentes | Artesanos del Ebro</title>
   </head>
+
   <body>
     <include src="views/header.html"></include>
 
-    <main>
-      <!-- contenido -->
-       Pagina speakers
+    <main class="speakers-page">
+      <section class="speakers-hero">
+        <p class="speakers-hero__eyebrow">Jornadas de artesanía</p>
+        <h1>Ponentes invitados</h1>
+        <p>
+          Artesanos, diseñadores y especialistas compartirán experiencias sobre tradición,
+          creatividad y nuevos oficios.
+        </p>
+      </section>
+
+      <section class="speakers-grid" aria-label="Listado de ponentes">
+        <article class="speaker-card">
+          <img src="assets/images/ponente_1.jpg" alt="Retrato de Marta Mendez" />
+          <div class="speaker-card__content">
+            <span class="badge text-bg-primary">Cerámica</span>
+            <h2>Marta Mendez</h2>
+            <p>Especialista en cerámica contemporánea y recuperación de técnicas tradicionales.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Ver charla</a>
+          </div>
+        </article>
+
+        <article class="speaker-card">
+          <img src="assets/images/ponente_2.jpg" alt="Retrato de Jordi Ferrer" />
+          <div class="speaker-card__content">
+            <span class="badge text-bg-success">Madera</span>
+            <h2>Jordi Ferrer</h2>
+            <p>Maestro artesano dedicado al trabajo de la madera y al diseño de mobiliario sostenible.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Ver charla</a>
+          </div>
+        </article>
+
+        <article class="speaker-card">
+          <img src="assets/images/ponente_3.jpg" alt="Retrato de María Castro" />
+          <div class="speaker-card__content">
+            <span class="badge text-bg-warning">Textil</span>
+            <h2>María Castro</h2>
+            <p>Diseñadora textil centrada en fibras naturales, tintes vegetales y producción local.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Ver charla</a>
+          </div>
+        </article>
+
+        <article class="speaker-card">
+          <img src="assets/images/ponente_4.jpg" alt="Retrato de Arnau Vidal" />
+          <div class="speaker-card__content">
+            <span class="badge text-bg-info">Innovación</span>
+            <h2>Arnau Vidal</h2>
+            <p>Investigador en nuevas tecnologías aplicadas a oficios artesanales y fabricación digital.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Ver charla</a>
+          </div>
+        </article>
+      </section>
     </main>
- 
+
     <include src="views/footer.html"></include>
+
     <script type="module" src="./assets/scripts/main.js"></script>
-    <!-- do not remove this line! -->
   </body>
 </html>
