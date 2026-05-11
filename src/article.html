@@ -5,19 +5,77 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
-    <!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>Artículo | Artesanos del Ebro</title>
   </head>
+
   <body>
     <include src="views/header.html"></include>
 
-    <main>
-      <!-- contenido -->
-            Pagina article
+    <main class="article-page">
+      <article class="article">
+        <header class="article__header">
+          <p class="article__eyebrow">Nota de prensa</p>
+          <h1>La artesanía vuelve al centro de la vida cultural del Ebro</h1>
+          <p class="article__lead">
+            Las jornadas Artesanos del Ebro reunirán a profesionales, talleres y visitantes
+            en torno a los oficios tradicionales y las nuevas formas de creación manual.
+          </p>
+        </header>
+
+        <figure class="article__figure article__figure--featured">
+          <img src="assets/images/article_1.jpg" alt="Mesa de trabajo artesanal con herramientas" />
+          <figcaption>Los talleres mostrarán procesos tradicionales y nuevas técnicas.</figcaption>
+        </figure>
+
+        <section class="article__content">
+          <p>
+            Durante varios días, las jornadas ofrecerán charlas, demostraciones y actividades
+            prácticas pensadas para acercar la artesanía a todos los públicos. El objetivo es
+            visibilizar el valor cultural, económico y social de los oficios manuales.
+          </p>
+
+          <p>
+            El programa combina propuestas de artesanos locales con la participación de
+            especialistas invitados. Cerámica, madera, textil, cuero y fabricación digital
+            estarán presentes en un recorrido que conecta tradición e innovación.
+          </p>
+
+          <blockquote>
+            La artesanía no es solo una técnica: es una forma de entender el tiempo, los materiales
+            y la relación entre quien crea y quien utiliza el objeto.
+          </blockquote>
+
+          <p>
+            Además de las ponencias, el público podrá participar en talleres de iniciación,
+            visitar espacios demostrativos y conocer proyectos que apuestan por la producción
+            local y sostenible.
+          </p>
+
+          <figure class="article__figure">
+            <img src="assets/images/article_2.jpg" alt="Detalle de una pieza artesanal en proceso" />
+            <figcaption>Las actividades incluirán demostraciones abiertas al público.</figcaption>
+          </figure>
+
+          <p>
+            La organización ha diseñado un programa accesible y diverso, con actividades
+            dirigidas tanto a profesionales como a familias, estudiantes y personas interesadas
+            en descubrir nuevas formas de creación.
+          </p>
+
+          <h2>Actividades destacadas</h2>
+
+          <ul>
+            <li>Charlas con artesanos invitados.</li>
+            <li>Talleres de cerámica, madera y textil.</li>
+            <li>Demostraciones de procesos tradicionales.</li>
+            <li>Espacios de encuentro entre creadores y visitantes.</li>
+          </ul>
+        </section>
+      </article>
     </main>
- 
+
     <include src="views/footer.html"></include>
+
     <script type="module" src="./assets/scripts/main.js"></script>
-    <!-- do not remove this line! -->
   </body>
 </html>

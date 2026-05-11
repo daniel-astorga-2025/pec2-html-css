@@ -1,0 +1,160 @@
+/* =========================
+   ARTICLE PAGE
+   Uses cascade layers + functional pseudo-classes
+========================= */
+
+@layer article-base, article-components, article-responsive;
+
+/* =========================
+   BASE
+========================= */
+
+@layer article-base {
+  .article-page {
+    flex: 1;
+    padding: 2rem;
+    background: #fbf7ef;
+
+    container-type: inline-size;
+  }
+
+  .article {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .article__header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .article__eyebrow {
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .article h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 6vw, 4rem);
+    line-height: 1.05;
+  }
+
+  .article__lead {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+  }
+
+  .article__content {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+}
+
+/* =========================
+   COMPONENTS
+========================= */
+
+@layer article-components {
+  .article__figure {
+    margin: 2rem 0;
+
+    img {
+      width: 100%;
+      max-height: 440px;
+      object-fit: cover;
+      border-radius: 1rem;
+      display: block;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #5f5a52;
+      text-align: center;
+    }
+  }
+
+  .article__figure--featured {
+    margin-bottom: 2.5rem;
+  }
+
+  .article__content blockquote {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-left: 6px solid #9c6b3d;
+    background: #fff;
+    border-radius: 0 1rem 1rem 0;
+    font-size: 1.25rem;
+    font-style: italic;
+  }
+
+  .article__content ul {
+    padding-left: 1.25rem;
+  }
+
+  .article__content li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* :is() aplicado con criterio para agrupar estilos de títulos */
+  .article__content :is(h2, h3) {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  /* :where() para enlaces futuros con baja especificidad */
+  .article__content :where(a) {
+    color: #7a4f2a;
+    text-decoration-thickness: 0.12em;
+    text-underline-offset: 0.2em;
+  }
+
+  /* :has() aplicado con criterio:
+     si el artículo contiene una imagen destacada, se refuerza visualmente el lead */
+  .article:has(.article__figure--featured) .article__lead {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  /* :has() adicional:
+     si una figura tiene figcaption, se ajusta el espaciado */
+  .article__figure:has(figcaption) {
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* =========================
+   RESPONSIVE + CONTAINER QUERIES
+========================= */
+
+@layer article-responsive {
+  @media (max-width: 768px) {
+    .article-page {
+      padding: 1.25rem;
+    }
+
+    .article__content {
+      font-size: 1rem;
+    }
+
+    .article__content blockquote {
+      padding: 1rem;
+      font-size: 1.1rem;
+    }
+  }
+
+  @container (min-width: 700px) {
+    .article__figure--featured img {
+      max-height: 520px;
+    }
+
+    .article__content {
+      font-size: 1.12rem;
+    }
+  }
+}
