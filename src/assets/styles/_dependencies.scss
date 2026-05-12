@@ -1,14 +1,14 @@
-/**
- * Import any npm dependencies in this file
- * see commented examples below
- */
-
-// @import "some-node-module";
-// @import "@some-company/some-node-module";
-
-@import "npm:@fortawesome/fontawesome-free/css/all.css";
+/* Bootstrap customization */
+$primary: #8a5a2b;
+$secondary: #3f6f5e;
+$body-bg: #fbf7ef;
+$body-color: #2f2a24;
+$border-radius: 1rem;
+$border-radius-sm: 0.75rem;
+$border-radius-lg: 1.25rem;
+$btn-border-radius: 999px;
+$card-border-radius: 1.25rem;
 
 @import "bootstrap/scss/bootstrap";
 
-// @import "../../node_modules/bootstrap/scss/bootstrap";
 

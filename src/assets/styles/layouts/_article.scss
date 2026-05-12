@@ -14,7 +14,6 @@
     flex: 1;
     padding: 2rem;
     background: #fbf7ef;
-
     container-type: inline-size;
   }
 
@@ -118,7 +117,7 @@
      si el artículo contiene una imagen destacada, se refuerza visualmente el lead */
   .article:has(.article__figure--featured) .article__lead {
     padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgb(0 0 0 / 12%);
   }
 
   /* :has() adicional:
@@ -133,7 +132,7 @@
 ========================= */
 
 @layer article-responsive {
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     .article-page {
       padding: 1.25rem;
     }

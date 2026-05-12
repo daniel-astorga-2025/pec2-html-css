@@ -25,8 +25,8 @@ body {
   text-align: center;
   background-color: #fff;
   box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    0 4px 6px -1px rgb(0 0 0 / 10%),
+    0 2px 4px -1px rgb(0 0 0 / 6%);
 }
 
 .uoc-logo {
@@ -37,7 +37,7 @@ body {
   max-width: 200px;
   height: auto;
 
-  @media (min-width: variables.$mqMinWidth) {
+  @media (min-width: variables.$mq-min-width) {
     max-width: none;
   }
 }
@@ -48,7 +48,7 @@ body {
   font-weight: 700;
   color: variables.$uoc-corporate;
 
-  @media (min-width: variables.$mqMinWidth) {
+  @media (min-width: variables.$mq-min-width) {
     font-size: 36px;
   }
 }
